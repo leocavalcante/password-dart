@@ -35,5 +35,5 @@ On the other hand, you are encouraged to change interations count for what your 
 | Digest | SHA-512 |
 | Block size | 64 bytes |
 | Salt size | 32 bytes [Fortuna](https://en.wikipedia.org/wiki/Fortuna_(PRNG)) |
-| Interation count | 10000 |
+| Iteration count | 10000 |
 | Key length | 64 bytes |
