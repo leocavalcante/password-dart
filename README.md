@@ -37,3 +37,7 @@ On the other hand, you are encouraged to change interations count for what your 
 | Salt | 32 bytes [Fortuna](https://en.wikipedia.org/wiki/Fortuna_(PRNG)) |
 | Iteration count | 10000 |
 | Key length | 64 bytes |
+
+***
+
+Waiting for [Argon2](https://en.wikipedia.org/wiki/Argon2).
