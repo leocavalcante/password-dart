@@ -1,6 +1,7 @@
 # password
 
-A set of high-level APIs over [PointyCastle](https://pub.dartlang.org/packages/pointycastle) and [CryptoUtils](https://pub.dartlang.org/packages/cryptoutils) to hash and verify passwords securely.
+A set of high-level APIs over [PointyCastle](https://pub.dartlang.org/packages/pointycastle) and [CryptoUtils](https://pub.dartlang.org/packages/cryptoutils) to hash and verify passwords securely.<br>
+Heavily inspired on [PHP's Password Hashing Functions](http://php.net/manual/en/ref.password.php).
 
 ## API
 
@@ -16,4 +17,23 @@ Password.hash('password', new PBKDF2());
 ```dart
 Password.verify('password', previousOutput);
 // true
+
+Password.verify('secret', previousOutput);
+// false
 ```
+
+## Defaults
+
+In almost cases, you should rely on default PRNG for salts. It is cryptographically secure and unique for each password.
+
+On the other hand, you are encouraged to change interations count for what your hardware can handle.
+
+### PBKDF2
+
+|   |   |
+| - | - |
+| Digest | SHA-512 |
+| Block size | 64 bytes |
+| Salt size | 32 bytes [Fortuna](https://en.wikipedia.org/wiki/Fortuna_(PRNG)) |
+| Interation count | 10000 |
+| Key length | 64 bytes |
