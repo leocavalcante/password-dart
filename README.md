@@ -1,5 +1,8 @@
 # password
 
+[![Pub Package](https://img.shields.io/pub/v/password.svg)](https://pub.dartlang.org/packages/password)
+[![Build Status](https://travis-ci.org/leocavalcante/password-dart.svg?branch=master)](https://travis-ci.org/leocavalcante/password-dart)
+
 A set of high-level APIs over [PointyCastle](https://pub.dartlang.org/packages/pointycastle) and [CryptoUtils](https://pub.dartlang.org/packages/cryptoutils) to hash and verify passwords securely.<br>
 Heavily inspired on [PHP's Password Hashing Functions](http://php.net/manual/en/ref.password.php).
 
