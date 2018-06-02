@@ -1,6 +1,6 @@
 name: password
-version: 0.1.1
-description: A set of high-level APIs over PointyCastle and CryptoUtils to hash and verify passwords securely
+version: 0.1.1+1
+description: A set of high-level APIs over PointyCastle and CryptoUtils to hash and verify passwords securely.
 author: leocavalcante <lc@leocavalcante.com>
 homepage: https://github.com/leocavalcante/password-dart
 environment:
