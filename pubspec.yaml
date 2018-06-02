@@ -1,0 +1,10 @@
+name: password
+version: 0.1.0
+description: A set of high-level APIs over PointyCastle and CryptoUtils to hash and verify passwords securely
+
+dependencies:
+  pointycastle: ^1.0.0-rc1
+  cryptoutils: ^0.3.0
+
+dev_dependencies:
+  test: ^0.12.38
