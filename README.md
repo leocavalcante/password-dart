@@ -6,6 +6,8 @@
 A set of high-level APIs over [PointyCastle](https://pub.dartlang.org/packages/pointycastle) and [CryptoUtils](https://pub.dartlang.org/packages/cryptoutils) to hash and verify passwords securely.<br>
 Heavily inspired on [PHP's Password Hashing Functions](http://php.net/manual/en/ref.password.php).
 
+> Looking for two-way cryptography (encryption+decryption)? Please, visit [encrypt](https://github.com/leocavalcante/encrypt).
+
 ## API
 
 ### `Password.hash`
