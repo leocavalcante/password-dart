@@ -4,7 +4,7 @@
 [![Build Status](https://travis-ci.org/leocavalcante/password-dart.svg?branch=master)](https://travis-ci.org/leocavalcante/password-dart)
 [![Donate](https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=E4F45BFVMFVQW)
 
-A set of high-level APIs over [PointyCastle](https://pub.dartlang.org/packages/pointycastle) and [CryptoUtils](https://pub.dartlang.org/packages/cryptoutils) to hash and verify passwords securely.<br>
+A set of high-level APIs over [PointyCastle](https://pub.dartlang.org/packages/pointycastle) to hash and verify passwords securely.<br>
 Heavily inspired on [PHP's Password Hashing Functions](http://php.net/manual/en/ref.password.php).
 
 > Looking for two-way cryptography (encryption+decryption)? Please, visit [encrypt](https://github.com/leocavalcante/encrypt).

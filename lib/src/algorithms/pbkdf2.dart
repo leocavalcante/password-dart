@@ -1,6 +1,5 @@
 import 'dart:typed_data';
 
-import 'package:cryptoutils/cryptoutils.dart';
 import 'package:pointycastle/api.dart' show KeyParameter;
 import 'package:pointycastle/digests/sha512.dart';
 import 'package:pointycastle/key_derivators/api.dart' show Pbkdf2Parameters;
@@ -9,6 +8,7 @@ import 'package:pointycastle/macs/hmac.dart';
 import 'package:pointycastle/random/fortuna_random.dart';
 
 import '../algorithm.dart';
+import '../helpers.dart';
 
 class PBKDF2 extends Algorithm {
   static String id = 'pcks';
@@ -27,7 +27,8 @@ class PBKDF2 extends Algorithm {
       String salt = null}) {
     final rnd = new FortunaRandom()..seed(new KeyParameter(new Uint8List(32)));
 
-    _salt = salt == null ? rnd.nextBytes(32) : CryptoUtils.hexToBytes(salt);
+    _salt =
+        salt == null ? rnd.nextBytes(32) : createUint8ListFromHexString(salt);
 
     _derivator =
         new PBKDF2KeyDerivator(new HMac(new SHA512Digest(), blockLength))
@@ -41,8 +42,8 @@ class PBKDF2 extends Algorithm {
     return encode(
       id,
       [blockLength, iterationCount, desiredKeyLength],
-      CryptoUtils.bytesToHex(_salt),
-      CryptoUtils.bytesToHex(bytes),
+      formatBytesAsHexString(_salt),
+      formatBytesAsHexString(bytes),
     );
   }
 }
