@@ -10,6 +10,7 @@ import 'package:pointycastle/random/fortuna_random.dart';
 import '../algorithm.dart';
 import '../helpers.dart';
 
+/// Wraps the PBKDF2 key derivator.
 class PBKDF2 extends Algorithm {
   static String id = 'pcks';
 
@@ -35,6 +36,7 @@ class PBKDF2 extends Algorithm {
           ..init(new Pbkdf2Parameters(_salt, iterationCount, desiredKeyLength));
   }
 
+  @override
   String process(String password) {
     final bytes =
         _derivator.process(new Uint8List.fromList(password.codeUnits));
