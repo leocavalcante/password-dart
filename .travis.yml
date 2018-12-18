@@ -1,6 +1,6 @@
 language: dart
 dart:
-  - "dev/release/2.0.0-dev.63.0"
+  - "dev/release/2.1.0"
 dart_task:
   - dartfmt
   - test
