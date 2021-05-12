@@ -18,14 +18,14 @@ class PBKDF2 extends Algorithm {
   final int iterationCount;
   final int desiredKeyLength;
 
-  PBKDF2KeyDerivator _derivator;
-  Uint8List _salt;
+  late PBKDF2KeyDerivator _derivator;
+  late Uint8List _salt;
 
   PBKDF2(
       {this.blockLength = 64,
       this.iterationCount = 10000,
       this.desiredKeyLength = 64,
-      String salt = null}) {
+      String? salt = null}) {
     final rnd = new FortunaRandom()..seed(new KeyParameter(new Uint8List(32)));
 
     _salt =
